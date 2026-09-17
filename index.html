@@ -6,12 +6,11 @@
   <title>김태건 포트폴리오</title>
   <style>
     :root {
-      /* 규칙 1: 형광색 배제, 녹색과 파란색 위주의 차분한 컬러 사용 */
       --bg: #ffffff;
       --surface: #f8f9fa;
       --card: #ffffff;
-      --accent-blue: #1d4ed8; /* 명확하고 차분한 파란색 */
-      --accent-green: #15803d; /* 안정적인 녹색 */
+      --accent-blue: #1d4ed8;
+      --accent-green: #15803d;
       --text-main: #111827;
       --text-muted: #4b5563;
       --border: #e5e7eb;
@@ -27,9 +26,6 @@
       line-height: 1.6;
     }
 
-    /* ── 규칙 2, 3: 그림자(box-shadow) 및 움직이는 배경(animation, gradient) 완전 제거 ── */
-
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -63,14 +59,12 @@
     }
     .nav-links a:hover { color: var(--accent-blue); }
 
-    /* ── SECTION COMMON ── */
     section {
       max-width: 900px;
       margin: 0 auto;
       padding: 6rem 2rem 2rem;
     }
 
-    /* 규칙 4: 제목에 마침표 제거 */
     .section-title {
       font-size: 1.8rem;
       font-weight: 700;
@@ -80,15 +74,6 @@
       padding-left: 0.8rem;
     }
 
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-
-    /* ── HERO ── */
     #hero {
       padding-top: 8rem;
       padding-bottom: 4rem;
@@ -112,10 +97,11 @@
     #hero h1 span { color: var(--accent-blue); }
 
     .hero-desc {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 620px;
       margin-bottom: 2rem;
+      line-height: 1.8;
     }
 
     .basic-info {
@@ -124,7 +110,7 @@
       flex-wrap: wrap;
       margin-bottom: 2rem;
     }
-    
+
     .info-item {
       font-size: 0.95rem;
       color: var(--text-muted);
@@ -133,11 +119,8 @@
       gap: 0.4rem;
     }
 
-    .info-item strong {
-      color: var(--text-main);
-    }
+    .info-item strong { color: var(--text-main); }
 
-    /* ── TECH SPECS ── */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -145,7 +128,7 @@
     }
 
     .skill-category h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 0.8rem;
       color: var(--text-main);
     }
@@ -157,7 +140,7 @@
     }
 
     .skill-tag {
-      background: var(--surface);
+      background: #f1f5f9;
       border: 1px solid var(--border);
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
@@ -165,13 +148,24 @@
       color: var(--text-main);
     }
 
-    .skill-tag.highlight-blue { border-color: var(--accent-blue); color: var(--accent-blue); font-weight: 600; }
-    .skill-tag.highlight-green { border-color: var(--accent-green); color: var(--accent-green); font-weight: 600; }
+    .skill-tag.highlight-blue {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
 
-    /* ── PROJECTS ── */
+    .skill-tag.highlight-green {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
+      border-radius: 8px;
       padding: 2rem;
       margin-bottom: 1.5rem;
     }
@@ -194,6 +188,8 @@
     .project-period {
       font-size: 0.85rem;
       color: var(--text-muted);
+      white-space: nowrap;
+      margin-left: 1rem;
     }
 
     .project-meta-grid {
@@ -203,13 +199,10 @@
       margin-bottom: 1.5rem;
       background: var(--surface);
       padding: 1rem;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-    }
+    .meta-item { display: flex; flex-direction: column; }
 
     .meta-label {
       font-size: 0.8rem;
@@ -234,25 +227,23 @@
       color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
-    
+
     .project-content ul {
       padding-left: 1.2rem;
       margin-bottom: 1rem;
     }
 
-    /* 시각 자료 플레이스홀더용 스타일 */
     .image-placeholder {
       background-color: var(--surface);
-      border: 1px dashed var(--text-muted);
-      border-radius: 4px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 6px;
       padding: 2rem;
       text-align: center;
-      color: var(--text-muted);
+      color: #94a3b8;
       font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
 
-    /* ── CERTS ── */
     .cert-table {
       width: 100%;
       border-collapse: collapse;
@@ -272,7 +263,6 @@
       width: 30%;
     }
 
-    /* ── FOOTER ── */
     footer {
       text-align: center;
       padding: 2rem;
@@ -286,6 +276,7 @@
       .skills-grid { grid-template-columns: 1fr; }
       .project-meta-grid { grid-template-columns: 1fr; gap: 0.5rem; }
       .nav-links { display: none; }
+      #hero h1 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -302,9 +293,10 @@
 
   <section id="hero">
     <span class="hero-position">게임 기획 및 UI 디자인 지원</span>
-    <h1><br /><span>김태건</span>입니다</h1>
+    <h1><span>김태건</span>입니다</h1>
     <p class="hero-desc">
-      팀의 원활한 소통을 돕고, 빈틈을 채워 완성도를 높이는 문제를 해결할 준비가 된 인재입니다. 
+      게임 기획과 UI 디자인을 중심으로, 팀 프로젝트에서는 소통과 시각화로 완성도를 높이는 역할을 맡아왔습니다.<br>
+      개인 프로젝트에서는 기획부터 구현까지 직접 경험하며 역량을 넓혀가고 있습니다.
     </p>
     <div class="basic-info">
       <div class="info-item"><strong>소속</strong> 유한대학교 게임콘텐츠과 3학년 (2027년 졸업 예정)</div>
@@ -334,7 +326,7 @@
       <div class="skill-category">
         <h3>오피스 / 문서</h3>
         <div class="skill-list">
-          <span class="skill-tag">워드, 한글(HWP)</span>
+          <span class="skill-tag">워드 · 한글(HWP)</span>
           <span class="skill-tag">PowerPoint</span>
           <span class="skill-tag">Excel</span>
         </div>
@@ -345,7 +337,6 @@
   <section id="projects">
     <h2 class="section-title">프로젝트</h2>
 
-    <!-- 1. 로블록스 프로젝트 카드 -->
     <div class="project-card">
       <div class="project-header">
         <div class="project-title">로블록스 3D 파쿠르(Obby) 게임 <span style="font-size: 0.9rem; color: var(--accent-green); font-weight: normal;">(제작 중)</span></div>
@@ -365,33 +356,27 @@
           <span class="meta-value">100%</span>
         </div>
       </div>
-      
       <div class="image-placeholder">
         [여기에 로블록스 스튜디오 작업 화면이나 테스트 플레이 스크린샷을 넣어주세요]
       </div>
-
       <div class="project-content">
         <h4>프로젝트 개요</h4>
         <p>로블록스 스튜디오와 Claude AI를 활용한 고속 달리기 액션 게임 개인 개발</p>
-        
         <h4>작업 내용</h4>
         <ul>
           <li><strong>메커니즘 설계:</strong> 기본 이동 속도 상향 및 '대시(Dash)' 기능 구현으로 고속 레이싱 재미 요소 구축</li>
           <li><strong>레벨 디자인:</strong> 가시성을 고려한 벽/큐브 오브젝트 배치 및 고속 주행용 장애물 회피 동선 설계</li>
         </ul>
-        
         <h4>문제 및 해결 과정</h4>
         <ul>
-          <li><strong>조작 피로도 개선:</strong> 초기 테스트 중 긴 동선으로 인한 지루함 발생 ➔ 이동 속도 상향 및 실시간 대시 시스템 도입으로 해결</li>
-          <li><strong>스크립트 버그 대응:</strong> 스테이지 확장 및 기믹 구현 중 버그 발생 ➔ 코드 구조 분석을 통해 스테이지 확장 시스템 안정화 완료</li>
+          <li><strong>조작 피로도 개선:</strong> 초기 테스트 중 긴 동선으로 인한 지루함 발생 → 이동 속도 상향 및 실시간 대시 시스템 도입으로 해결</li>
+          <li><strong>스크립트 버그 대응:</strong> 스테이지 확장 및 기믹 구현 중 버그 발생 → 코드 구조 분석을 통해 스테이지 확장 시스템 안정화 완료</li>
         </ul>
-
         <h4>미래 적용 방향</h4>
         <p>기초 빌드 안정화 후, 유저 인지 능력을 자극하는 후속 스테이지 기믹 보완 및 정식 퍼블리싱 예정</p>
       </div>
     </div>
 
-    <!-- 2. Stellar Core 카드 -->
     <div class="project-card">
       <div class="project-header">
         <div class="project-title">Stellar Core (2D 횡스크롤 슈팅 게임)</div>
@@ -411,26 +396,23 @@
           <span class="meta-value">40%</span>
         </div>
       </div>
-
       <div class="image-placeholder">
         [여기에 Stellar Core 인게임 UI 배치 스크린샷이나 플레이 영상을 넣어주세요]
       </div>
-
       <div class="project-content">
         <h4>작업 내용</h4>
         <ul>
           <li>우주 배경의 보스전 및 전투 패턴 기획 보조</li>
           <li>게임 내 HUD 및 시스템 UI 에셋 제작 및 배치</li>
-          <li>팀원 간 개발 일정 조율 및 회의록 작성(팀 서포터 역할 수행)</li>
+          <li>팀원 간 개발 일정 조율 및 회의록 작성 (팀 서포터 역할 수행)</li>
         </ul>
         <h4>문제 및 해결 과정</h4>
         <p>팀원 간 기획 의도가 엇갈리는 문제가 발생했을 때, 중간에서 의견을 조율하고 보고서와 PPT 제작, 시각화된 UI 프로토타입을 신속하게 제작하여 소통의 오류를 해결했습니다.</p>
         <h4>미래 적용 방향</h4>
-        <p>이 경험을 바탕으로 실무에서도 기획의 모호함을 빠른 시각화와 문서화로 구체화하여, 부서 간 소통 비용을 줄이고 프로젝트의 진행 속도를 높이는 데 기여하겠습니다.</p>
+        <p>이 경험을 바탕으로, 기획의 모호함을 빠른 시각화와 문서화로 구체화하여 팀 내 소통 비용을 줄이는 방식을 앞으로도 이어가겠습니다.</p>
       </div>
     </div>
 
-    <!-- 3. 전화받으세요! 카드 -->
     <div class="project-card">
       <div class="project-header">
         <div class="project-title">전화받으세요!</div>
@@ -450,27 +432,24 @@
           <span class="meta-value">20%</span>
         </div>
       </div>
-
       <div class="image-placeholder">
         [여기에 온라인 카페 홍보 게시글 캡처나 발표 PPT 슬라이드 이미지를 넣어주세요]
       </div>
-
       <div class="project-content">
         <h4>작업 내용</h4>
         <ul>
           <li>게임 개발일지 작성 및 기록 관리</li>
           <li>온라인 카페를 활용한 게임 홍보 진행</li>
           <li>프로젝트 발표</li>
-          <li>사운드, 효과음</li>
+          <li>사운드 및 효과음 작업</li>
         </ul>
         <h4>문제 및 해결 과정</h4>
-        <p>좋은 댓글도 있었지만 핵심 재미 요소를 어려워 하는 반응도 있었음.</p>
+        <p>홍보 게시글에 대한 반응 중, 핵심 게임 규칙을 어려워하는 피드백이 있었습니다. 텍스트 중심의 설명 방식이 새 유저에게 진입 장벽이 된다고 판단하여, 직관적인 이미지와 요약 텍스트를 재배치하는 방식으로 개선했습니다.</p>
         <h4>미래 적용 방향</h4>
-        <p>직관적인 이미지와 요약된 텍스트를 재배치하여, 사람들이 게임 룰을 쉽게 이해하고 흥미를 느끼도록 설명하고 개선함.</p>
+        <p>홍보나 발표 자료를 만들 때 "처음 접하는 사람이 30초 안에 이해할 수 있는가"를 기준으로 구성을 점검하는 습관을 이어가겠습니다.</p>
       </div>
     </div>
 
-    <!-- 4. 냉장고 관리 앱 카드 -->
     <div class="project-card">
       <div class="project-header">
         <div class="project-title">냉장고/식재료 관리 앱 UI 프로토타이핑</div>
@@ -490,17 +469,19 @@
           <span class="meta-value">100%</span>
         </div>
       </div>
-
       <div class="image-placeholder">
         [여기에 Figma 와이어프레임이나 모바일 앱 인터페이스 디자인 캡처를 넣어주세요]
       </div>
-
       <div class="project-content">
         <h4>작업 내용</h4>
         <ul>
           <li>Figma를 활용한 모바일 앱 화면 기획 및 와이어프레임 설계</li>
           <li>식재료 유통기한 관리 및 남은 재료 기반 레시피 추천 기능 인터페이스 디자인</li>
         </ul>
+        <h4>문제 및 해결 과정</h4>
+        <p>유통기한 관리와 레시피 추천이라는 두 기능을 하나의 화면 흐름으로 자연스럽게 연결하는 것이 과제였습니다. 화면 전환 흐름을 여러 번 재설계하여, 사용자가 최소한의 탭으로 두 기능 모두에 접근할 수 있도록 구성했습니다.</p>
+        <h4>미래 적용 방향</h4>
+        <p>UX 흐름 설계 경험을 게임 UI 기획에도 적용하여, 플레이어가 직관적으로 조작할 수 있는 인터페이스 설계 역량을 키워가겠습니다.</p>
       </div>
     </div>
   </section>
